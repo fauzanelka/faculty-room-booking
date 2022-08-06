@@ -1,4 +1,4 @@
-# Laravel 7 Room Booking demo
+# Laravel 7 Room Booking Case
 
 Simple project with ability to search for available room and book them, also see events on the calendar, filtered by room or booked user.
 
@@ -12,26 +12,44 @@ Simple project with ability to search for available room and book them, also see
 
 Adminpanel is generated with Laravel generator: [QuickAdminPanel.com](https://quickadminpanel.com)
 
+## Prerequisites
 
-## How to use
+- PHP 7.2
 
-- Clone the repository with __git clone__
-- Copy __.env.example__ file to __.env__ and edit database credentials there
-- Run __composer install__
-- Run __php artisan key:generate__
-- Run __php artisan migrate --seed__ (it has some seeded data for your testing)
-- That's it: launch the main URL. 
-- You can login to adminpanel with default credentials __admin@admin.com__ - __password__
-- For Paid bookings, please fill in `.env` with your Stripe credentials
+## Quick Start
 
-## License
+Clone this project
 
-Basically, feel free to use and re-use any way you want.
+```bash
+git clone https://github.com/fauzanelka/faculty-room-boking.git
+```
 
----
+Copy `.env.example` to `.env` and set your variables
 
-## More from our LaravelDaily Team
+```bash
+cp .env.example .env
+```
 
-- Check out our adminpanel generator [QuickAdminPanel](https://quickadminpanel.com)
-- Subscribe to our [YouTube channel Laravel Business](https://www.youtube.com/channel/UCTuplgOBi6tJIlesIboymGA)
-- Enroll in our [Laravel Online Courses](https://laraveldaily.teachable.com/)
+Update composer dependencies
+
+```bash
+composer update
+```
+
+Generate application key
+
+```bash
+php artisan key:generate
+```
+
+Run migration
+
+```bash
+php artisan migrate --seed
+```
+
+Run server
+
+```bash
+php artisan serve
+```
