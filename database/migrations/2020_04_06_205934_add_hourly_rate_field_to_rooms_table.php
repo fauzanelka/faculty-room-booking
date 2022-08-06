@@ -14,7 +14,7 @@ class AddHourlyRateFieldToRoomsTable extends Migration
     public function up()
     {
         Schema::table('rooms', function (Blueprint $table) {
-            $table->double('hourly_rate', 5, 2)->nullable();
+            $table->unsignedBigInteger('hourly_rate')->nullable();
         });
     }
 
